@@ -1,6 +1,7 @@
-<h1>Blog Posts</h1>
-<h3>Sample Post One</h3>
-<p><%=@content_first %></p>
-<hr>
-<h3>Sample Post Two</h3>
-<p><%=@content_second %></p>
+<h1>Predictions</h1>
+<% @posts.each do |post| %>
+	<h3><%= link_to post.title, post %></h3>
+	<p><%= post.prediction %></p>
+	<hr>
+<% end %>
+
